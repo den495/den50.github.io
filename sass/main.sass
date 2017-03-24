@@ -1,0 +1,507 @@
+@import "_vars"
+@import "bourbon"
+@import "fonts"
+*
+  margin: 0
+  padding: 0
+body
+  color: #fff
+  font-family: sans-serif
+  
+.container
+  h1.description_h1
+    margin-top: 150px
+    color: #fff
+  p.description_p
+    width: 600px
+    color: #fff
+    font-size: em(18px)
+.slide_slider
+  &::before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background-color: rgba($accent3, 0.5)
+
+.btn-primary_default
+  background-color: rgba($MColor, 0.9)
+  border: 1px solid rgba($MColor, 1)
+  transition: all .2s ease
+  &:hover
+    background-color: darken(rgba($MColor, 0.9), 6%)
+    border: 1px solid rgba($MColor, 1)
+  &:active
+    background-color: lighten(rgba($MColor, 0.9), 6%)
+    border: 1px solid rgba($MColor, 1)
+  &:focus
+    background-color: lighten(rgba($MColor, 0.9), 6%)
+    border: 1px solid rgba($MColor, 1)
+  &:visited
+    background-color: lighten(rgba($MColor, 0.9), 6%)
+    border: 1px solid rgba($MColor, 1)
+.items-obj
+  padding-bottom: 30px
+
+.main_nav
+  background-color: rgba($MColor, 0.8)
+  border: none
+  font-size: em(16px)
+  .navbar-brand
+    color: #FFF
+  .navbar-brand:hover
+    color: #fff
+  .nav.navbar-nav
+    line-height: 100%
+    li#noDrop
+      a
+        color: #fff
+        border-bottom: solid 2px rgba($MColor, 0.8)
+        font-size: em(16px)
+        transition: all .4s ease
+        &:hover
+          border-bottom: solid 2px $accent
+          background-color: rgba($MColor, 0.8)
+    li.dropdown
+      a.dropdown-toggle
+        color: #fff
+        transition: all .4s ease
+        border-bottom: solid 2px rgba($MColor, 0.8)
+        &:hover
+          border-bottom: solid 2px $accent
+          background-color: rgba($MColor, 0.8)
+        &:focus
+          background-color: rgba($MColor, 0.8)
+        &:active
+          background-color: rgba($MColor, 0.8)
+        &:visited
+          background-color: rgba($MColor, 0.8)
+    li
+      a
+        color: #000
+  ul.nav.navbar-nav.navbar-right
+    li
+      a
+        color: #fff
+        //font-size: em(19px)
+        font-family: "RobotoRegular"
+        //padding: 19.9px 20px
+        text-decoration: none
+        //margin-right: -4px
+      a:hover
+        background-color: rgba($MColor,0.8)
+        border-bottom: 2px solid $accent
+      a:focus
+        background-color: rgba($MColor,0.6)
+        border-bottom: 2px solid $accent
+    .phone-nav
+      color: #fff
+      //font-size: em(19px)
+      font-family: "RobotoRegular"
+      padding: 17.9px 17px
+      text-decoration: none
+      //margin-right: -4px
+    .phone-nav::selection
+      background-color: $accent
+.active-nav
+  background-color: rgba($MColor, .9)
+.active-menu
+  background-color: $MColor
+.block  
+  width: 100px
+  height: 100px
+  background-color: #000
+  margin: 100px
+  position: absolute
+  animation: wobble 1s
+
+@-webkit-keyframes fadeInLeft
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+
+  100%
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+#ToTop
+  position: fixed
+  bottom: 30px
+  right: 30px
+  width: 50px
+  height: 50px
+  +border-radius(4px)
+  color: #fff
+  text-align: center
+  padding-top: 15px 
+  background-color: rgba($MColor,0.8)
+  cursor: pointer
+
+.item-object
+  color: #000
+  text-align: center
+  img.image-circle
+    width: 50%
+    +border-radius(50%)
+    display: inline-block
+  p.obj-item-description
+    font-size: em(18px)
+    color: #000
+    margin-top: 15px
+.h1_p
+  color: #000
+.obj1
+  background-color: #EAEAEA
+  width: 100%
+  min-height: 200px
+  opacity: 0
+  color: #000
+  border: 3px solid #fff
+  transition: border 0.1s ease-out 
+  +border-radius(10px)
+  //width: 400px
+  img
+    max-width: 250px
+    border: 10px solid rgb(240,240,240)
+    transition: all 0.3s ease-out 
+  img:hover
+    border: 10px solid $accent1
+    +border-radius(50%)
+  h2
+    color: #000
+  p
+    margin-top: 30px
+    font-size: 20px
+    color: #000
+section.main_news
+  padding-top: 30px
+  min-height: 600px
+  max-height: 1300px
+  padding: 30px 0 30px 0
+  background: url(../img/75.png) center no-repeat
+  background-size: cover
+  position: relative
+  &::before
+    content: ''
+    top: 0
+    left: 0
+    position: absolute
+    background-color: rgba($accent3, .7)
+    width: 100%
+    height: 100%
+  h1
+    color: #fff
+    text-align: center
+  .row
+    padding: 0
+  //margin-top: 100px
+
+  .news
+    img
+      width: 100%
+      +border-radius(2px)
+      overflow: hidden
+  p
+    margin-top: 30px
+    font-size: em(20px)
+.figure-news
+  display: inline-block
+  position: relative
+  max-width: 100%
+  overflow: hidden
+  text-align: center
+  
+  figcaption
+    background-color: rgba(0,0,0,0.4)
+    display: block
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 20px 15px
+    box-sizing: border-box
+    height: 68px
+    transition: all 0.3s ease-out 
+    *
+      margin: 0 0 10px 0
+    &:last-child
+      margin: 0
+#featuredpos1
+  &::before
+    content: "#1"
+    width: 150px
+    font-size: em(25px)
+    font-family: "RobotoCondensed"
+    height: 70px
+    position: absolute
+    background-color: $accent
+    transform: rotate(-40deg)
+    padding-top: 30px
+    top: -15px
+    left: -50px
+#featuredpost2
+  &::before
+    content: "#2"
+    width: 150px
+    font-size: em(25px)
+    font-family: "RobotoCondensed"
+    height: 70px
+    position: absolute
+    background-color: $accent
+    transform: rotate(-40deg)
+    padding-top: 30px
+    top: -15px
+    left: -50px
+.btn-more
+  background-color: rgba($MColor, 0.8)
+  border: none
+.btn-more:hover
+  background-color: rgba($MColor, 1)
+.btn-more:focus
+  background-color: rgba($MColor, 1)
+.btn-more:active
+  background-color: rgba($MColor, 0.6)
+.leftS, .rightS
+  margin-top: 100px
+
+#lineBottom
+  width: 50px
+  height: 5px
+  display: block
+  transition: all 0.3s ease-out 
+.login-default
+  //display: inline-block
+  width: 400px
+.googlemaps
+  opacity: 1
+  iframe
+    opacity: 1
+footer
+  min-height: 100px
+  background-color: $accent2
+  color: #fff
+  ul
+    margin-top: 20px
+    li
+      list-style: none
+      a
+        color: #fff
+      a:hover
+        color: rgb(213,213,213)
+        text-decoration: none
+
+  p
+    margin-top: 20px
+.description
+  min-height: 500px
+  padding: 50px 0 50px 0
+  width: 100%
+  .image-description
+    height: 400px
+    padding: 0
+    overflow-y: hidden
+    border-radius: 5px
+    img 
+      max-width: 100%
+      //max-height: 100%
+
+  .caption-description
+    min-height: 300px
+    max-height: 400px
+    overflow-y: hidden
+    border-radius: 0 5px 5px 0
+    p
+      color: #000
+      transition: all 0.01s ease-out 
+      font-size: em(19px)
+    .moreinfo
+      float: right
+      opacity: 0
+      transition: all 0.3s ease-out 
+.caption-slide
+  p.caption-description
+    font-size: em(19px)
+    color: #fff
+  h1
+    color: #fff
+
+.carousel-caption
+  top: 16%
+.slide-form
+  min-height: 400px
+  //border: 1px solid red
+  background-color: rgba($accent, 1)
+  +border-radius(10px)
+  margin-top: 70px
+  h2
+    text-shadow: none
+    margin-bottom: 20px
+    color: #fff
+.parallax 
+  /* The image used */
+  background-image: url("img_parallax.jpg")
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.wrap_label
+  //width: 500px
+
+.InputForLabel
+  input
+    width: 220px
+    border: none
+    +border-radius(3px)
+    height: 35px
+    margin-top: -5px
+
+.labelForInput
+  float: left
+  text-align: right
+  margin: 0 5px 0 0
+  width: 100px
+  padding-top: 0px
+  font-size: em(16px)
+  text-shadow: none
+
+.row_form-slide
+  display: block
+  padding-bottom: 4px
+  width: 400px
+  //margin: auto
+  margin-bottom: 18px
+.form-default
+  outline: none
+  color: #000
+  height: 30px
+  border: 1px solid rgba($accent2, 1)
+  +border-radius(5px)
+  font-size: em(17px)
+  padding: 5px
+.btn-form
+  margin-top: 30px
+  min-width: 100px
+.btn-form::-webkit-input-placeholder
+  opacity: 1
+.shift_left
+  color: #000
+  font-size: em(42px)
+  position: absolute
+
+.advantages
+  width: 100%
+  height: 1000px
+  background-color: #F8F8F8
+  color: #000
+  padding: 50px 0 70px 0
+.item_advantages
+  padding: 0
+
+
+.item_row_advantages_img
+  height: 350px
+  width: 100%
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .3)
+    width: 100%
+    height: 350px
+.item_row_advantages_desc
+  height: 350px
+  width: 100%
+  background-color: #fff
+  padding: 40px 30px
+  h3
+    //padding: 40px 0 0 0
+    margin: 0
+    color: #16b5ef
+    font-family: 'open-sans-bold'
+    font-size: em(17px)
+    letter-spacing: 1px
+
+.uppercase
+  text-transform: uppercase
+
+.caption_advantages
+  color: #212121
+  font-family: "open-sans-bold"
+  letter-spacing: 3px
+  padding: 50px 0 20px 0
+  font-size: em(19px)
+.caption_advantagas_detailed
+  color: #777777
+  line-height: 25px
+.number_advantages
+  font-family: "Times New Roman"
+.header_advantages
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 5px
+  padding: 10px 0 40px 0
+.weves
+  img
+    display: inline-block
+
+.main_advantageses
+  width: 100%
+  height: 700px
+  display: block
+  box-shadow: 0 0 20px rgba(0,0,0,0.3)
+.caret_left_advantages
+  color: #fff
+  position: absolute
+  right: -2px
+  top: 50px
+  font-size: em(35px)
+.caret_right_advantages
+  color: #fff
+  position: absolute
+  left: -2px
+  top: 50px
+  font-size: em(35px)
+.caret_up_advantages
+  color: #fff
+  position: absolute
+  left: 50px
+  bottom: -9px
+  font-size: em(35px)
+.comments
+  width: 100%
+  height: 475px
+  padding: 40px 0 40px 0
+  color: #000
+  .header_comments
+    text-transform: uppercase
+    color: #000
+    padding-bottom: 80px
+  .copy_comment
+    height: 25px
+    width: 25px
+  .main_text_comment
+    padding: 20px 0 30px 0
+    font-size: em(16px)
+    line-height: 25px
+    text-align: justify
+    color: #bcbcbc
+  .human_comment
+    height: 65px
+    width: 65px
+    float: left
+  .name_human_comment
+    padding: 20px 
+    color: #36aeea
+    float: left
+.text-strong
+  font-weight: bold

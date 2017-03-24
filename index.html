@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="Hotel | Murom | HotelMurom">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <title>Hotel-murom</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/media.min.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<link rel="stylesheet" href="libs/owl.carousel/css/docs.theme.min.css">-->
+  <link rel="stylesheet" href="libs/owl.carousel/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="libs/owl.carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <!--Required Scripts-->
+  <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+  <script src="libs/owl.carousel/js/owl.carousel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top main_nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Hotel Murom</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active-nav" id="noDrop"><a href="#">Home</a></li>
+          <li id="noDrop"><a href="#about">About</a></li>
+          <li id="noDrop"><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+         <li class="phone-nav">Phone: +79123456789</li>
+         <li><a href="#">login</a></li>
+       </ul>
+     </div><!--/.nav-collapse -->
+   </div>
+ </nav>
+ <!--Start Slider-->
+ <div class="carousel slide" id="carousel">
+  <ol class="carousel-indicators">
+    <li class="active" data-target="#carousel" data-slide-to="0"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active slide_slider">
+      <img src="img/header.jpg" alt="">
+      <div class="carousel-caption">
+        <div class="container-fluid">
+          <div class="caption-slide">
+            <div class="row">
+              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+               <h1 class="text-left">First Slide</h1>
+               <p class="text-left caption-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae asperiores ex at, reprehenderit culpa quidem, quasi vero voluptatibus adipisci iure veritatis fugit totam quia eligendi nulla. Nihil error voluptates perspiciatis.</p>
+             </div>
+             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 slide-form">
+               <h2>Reservation</h2>
+               <form action="GET" class="form-slide">
+                 <div class="row_form-slide">
+                  <div class="labelForInput">
+                    Whats is your name?:
+                  </div>
+                  <div class="InputForLabel">
+                    <input type="text" name="name" placeholder="Иванов Иван Иванович" class="form-default">
+                  </div>
+                </div>
+                <div class="row_form-slide">
+                  <div class="labelForInput">
+                    Your phone:
+                  </div>
+                  <div class="InputForLabel">
+                    <input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="phone" placeholder="Phone" class="form-default">
+                  </div>
+                </div>
+                <div class="row_form-slide">
+                  <div class="labelForInput">
+                    Your email:
+                  </div>
+                  <div class="InputForLabel">
+                    <input type="email" name="email" placeholder="example@example.ru" class="form-default">
+                  </div>
+                </div>
+                <div class="row_form-slide">
+                  <div class="labelForInput">
+                    Date in:
+                  </div>
+                  <div class="InputForLabel">
+                    <input type='text' class="datepicker-here form-default" data-position="right top" name="date" placeholder="Date1">
+                  </div>
+                </div>
+                <div class="row_form-slide text-center">
+                  <div class="labelForInput">
+                    Date out:
+                  </div>
+                  <div class="InputForLabel">
+                    <input type='text' class="datepicker-here form-default" data-position="right top" name="date" placeholder="Date2">
+                  </div>
+                  <input type="submit" class="btn btn-primary btn-form" value="Enter">
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item slide_slider">
+    <img src="img/header.jpg" alt="">
+    <div class="carousel-caption">
+      <div class="container">
+        <div class="caption-slide">
+          <div class="col-lg-6">
+            <h1 class="text-left">Second Slide</h1>
+            <p class="text-left caption-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae asperiores ex at, reprehenderit culpa quidem, quasi vero voluptatibus adipisci iure veritatis fugit totam quia eligendi nulla. Nihil error voluptates perspiciatis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item slide_slider">
+    <img src="img/header.jpg" alt="">
+    <div class="carousel-caption">
+      <div class="container">
+        <div class="caption-slide">
+          <div class="col-lg-6">
+            <h1 class="text-left">Triple Slide</h1>
+            <p class="text-left caption-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae asperiores ex at, reprehenderit culpa quidem, quasi vero voluptatibus adipisci iure veritatis fugit totam quia eligendi nulla. Nihil error voluptates perspiciatis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#carousel" class="left carousel-control" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a href="#carousel" class="right carousel-control" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+<!--End Slider-->
+<div class="container">
+  <div class="row">
+    <h1 class="text-center h1_p">Description Objects</h1>
+    <div class="large-12">
+      <section class="owl-carousel owl-theme owl-loaded owl-drag items-obj">
+        <div class="item item-object">
+         <img src="img/Object1.jpg" alt="" class="image-circle">
+         <p class="text-center obj-item-description">Lorem ipsum dolor sit amet, consectetur.</p>
+       </div>
+       <div class="item item-object">
+         <img src="img/Object2.jpg" alt="" class="image-circle">
+         <p class="text-center obj-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dicta eligendi aliquam rem voluptate iure facilis quo illum eius magni, iusto suscipit, aperiam quidem ad non. Nulla eius adipisci, assumenda.</p>
+       </div>
+       <div class="item item-object">
+         <img src="img/Object1.jpg" alt="" class="image-circle">
+         <p class="text-center obj-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nulla alias reprehenderit vel labore nemo fugiat aperiam fugit ab ex, adipisci nihil dolorum consequuntur tenetur inventore quam esse vitae. Pariatur.</p>
+       </div>
+       <div class="item item-object">
+         <img src="img/Object1.jpg" alt="" class="image-circle">
+         <p class="text-center obj-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates et ex error maxime commodi aliquid dicta fugiat perferendis provident ipsam ut blanditiis aspernatur nulla, porro qui esse inventore vitae fugit.</p>
+       </div>
+       <div class="item item-object">
+         <img src="img/Object1.jpg" alt="" class="image-circle">
+         <p class="text-center obj-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam dolor repellendus sequi quod itaque modi. Omnis, perspiciatis. Recusandae blanditiis repudiandae minus, optio rem enim dicta accusamus excepturi. Assumenda, enim, placeat.</p>
+       </div>
+
+
+     </section>
+   </div>
+
+
+
+   <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items:2,
+        margin:10,
+        autoHeight:true,
+        loop: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true
+      })
+    })
+  </script>
+
+</div>
+
+</div>
+<section class="main_news">
+  <div class="container">
+    <div class="row">
+    <h1 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">News</h1>
+      <div class="news new1 col-lg-6 col-md-6  col-sm-12  col-xs-12">
+        <figure id="featuredpos1" class="figure-news"><img src="img/news1.jpg" alt="">
+          <figcaption>
+            <h2 class="heading">Urna sit amet pulvinar</h2>
+            <p class="shortintro">Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet.&hellip;</p>
+            <p class="link"><a class="btn btn-primary btn-more" href="#">Read More &raquo;</a></p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="news new2 col-lg-6 col-md-6  col-sm-12  col-xs-12">
+        <figure id="featuredpost2" class="figure-news"><img src="img/figure-news2.jpg" alt="" class="new1">
+          <figcaption>
+            <h2 class="heading">Urna sit amet pulvinar</h2>
+            <p class="shortintro">Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet.&hellip;</p>
+            <p class="link"><a class="btn btn-primary btn-more" href="#">Read More &raquo;</a></p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="container">
+    <div class="row">
+      <p class="text-center waves"><img src="img/waves.png" alt=""></p>
+      <h2 class="text-center header_advantages">Advantages is awesome!</h2>
+      <div class="main_advantageses">
+        <div class="item_advantages col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <div class="wrap_img">
+            <div class="item_row_advantages_img" style="background: url(../img/advantages_img_cars.jpg) center;">
+              <i class="fa fa-caret-left caret_left_advantages" aria-hidden="true"></i>
+            </div>
+            
+          </div>
+          <div class="item_row_advantages_desc">
+           <h3 class="text-center uppercase">Еда</h3>
+           <p class="text-center uppercase caption_advantages">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+           <p class="text-center caption_advantagas_detailed">You know how to make best coffee in the universe? Or, maybe you’re very good in designing gloves? Tell everyone about your experience and skills.</p>
+           <p class="text-center number_advantages">02</p>
+         </div>
+       </div>
+       <div class="item_advantages col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="item_row_advantages_desc">
+          <h3 class="text-center uppercase">Парковка</h3>
+          <p class="text-center uppercase caption_advantages">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+          <p class="text-center caption_advantagas_detailed">You know how to make best coffee in the universe? Or, maybe you’re very good in designing gloves? Tell everyone about your experience and skills.</p>
+          <p class="text-center number_advantages">01</p>
+        </div>
+        <div class="wrap_img">
+         <div class="item_row_advantages_img" style="background: url(../img/advantages_img_food.jpg) center; background-size: cover">
+          <i class="fa fa-caret-right caret_right_advantages" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div>
+    <div class="item_advantages col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <div class="item_row_advantages_img" style="background: url(../img/advantages_img_wifi.jpg) center; ">
+        <i class="fa fa-caret-up caret_up_advantages" aria-hidden="true"></i>
+      </div>
+      <div class="item_row_advantages_desc">
+       <h3 class="text-center uppercase">Wi-Fi</h3>
+       <p class="text-center uppercase caption_advantages">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+       <p class="text-center caption_advantagas_detailed">You know how to make best coffee in the universe? Or, maybe you’re very good in designing gloves? Tell everyone about your experience and skills.</p>
+       <p class="text-center number_advantages">03</p>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+
+
+
+
+<section class="comments">
+  <div class="container">
+    <div class="row">
+      <p class="text-center waves"><img src="img/waves.png" alt=""></p>
+      <h2 class="header_comments text-center">our Clients say</h2>
+      <div class="col-lg-6">
+        <img src="img/comment_.png" alt="" class="copy_comment">
+        <p class="main_text_comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+        </p>
+        <img src="img/human1_comment.png" alt="" class="human_comment">
+        <p class="name_human_comment"><span class="text-strong">Pavliv Yaroslav</span> Web designer</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/comment_.png" alt="" class="copy_comment">
+        <p class="main_text_comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+        </p>
+        <img src="img/human2_comment.png" alt="" class="human_comment">
+        <p class="name_human_comment"><span class="text-strong">Pavliv Yaroslav</span> Web designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="googlemaps">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6376.953098493997!2d42.040044762039685!3d55.59168575890786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ec5e9ef78409b%3A0xdcb329cc8565d478!2z0LzQuNC90Lgt0L7RgtC10LvRjCDQkNGB0YHQvtGA0YLQuA!5e0!3m2!1sru!2sru!4v1487925441525" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+  </iframe>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <ul class="text-center">
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">About us</a></li>
+      </ul></div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <ul class="text-center">
+          <li><a href="#">Screens</a></li>
+          <li><a href="#">Addresses</a></li>
+          <li><a href="#">Prices</a></li>
+        </ul>
+        <hr>
+        <p class="text-center">
+         &copy;MatrixCompany</p>
+       </div>
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+         <ul class="text-center">
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        nav: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        }
+      })
+    })
+  </script>
+  <script>var scr = {"scripts":[
+    {"src" : "js/libs.js", "async" : false},
+    {"src" : "js/main.js", "async" : false}
+    ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+  </script>
+  <!--<script src="js/datepicker.min.js"></script>-->
+  <!--<script src="js/JQwork.js"></script>-->
+  <div id="ToTop"><span class="glyphicon glyphicon-chevron-up"></span></div>
+</body>
+</html>

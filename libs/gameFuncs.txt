@@ -1,0 +1,62 @@
+ctx.strokeText()//Создание текста
+ctx.rect(50, 50, 200, 40)//Создание Прямоугольника
+ctx.fill()//заливка
+ctx.stroke()//Отобризить элемент
+ctx.lineWidth(width)//размер линии
+ctx.clearRect 0, 0, canvas.width, canvas.height//очистка холста
+////////////////////////////////////////////////
+//////////Text//////////////////////////////////
+ctx.fillStyle = "#00F";
+ctx.strokeStyle = "#F00";
+ctx.font = "italic 30pt Arial";
+ctx.fillText("Fill text", 20, 50);
+ctx.font = 'bold 30px sans-serif';
+ctx.strokeText("Stroke text", 20, 100);
+ctx.textAlign = 'center'
+////////////////////////////////////////////////////////
+///////////////////image////////////////////////////////
+ctx.drawImage img, x, y, img.width, img.heigh
+
+***********************************************************
+**************пример анимации******************************
+x = 10
+b = on
+img = new Image()
+
+img.src = '../img/human.jpg'
+move = ->
+	if b
+		x+= 1
+		if x == 900
+			b = no
+	else
+		x = x - 1
+		b = on if x == 10
+
+	ctx.clearRect 0, 0, canvas.width, canvas.height
+	ctx.drawImage img, x, 10, 50, 30
+	return
+
+img.onload = ->
+	setInterval(move, 1)
+***********************************************************
+***********************************************************
+mapManager=
+	mapData: null,
+	tLayer: null,
+	xCount: 0,
+	yCount: 0,
+	tSize:
+		x:64,
+		y:64
+	mapSize:
+		x:64,
+		y:64
+	tilesets: new Array()
+
+loadMap =(path) ->
+	request = new XMLHttpRequest()
+	request.onreadystatechange = ->
+		#if request.readyState is 4 and request.status is 200
+	request.open("GET", path, true)
+	do request.send
